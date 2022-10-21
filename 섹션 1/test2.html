@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script> 
+        // 두 변의 길이의 합이 나머지 한 변의 길이보다 커야한다.
+        // 가장 길이가 짧은 변을 구하고 나머지 변의 합이 그 변의 길이보다 크면 YES
+            function solution(a, b, c){
+                let answer="YES", max;
+                let sum = a+b+c;
+                
+                if(a>b) max = a;
+                else max = b;
+                if(max<c) max = c;
+
+                // if((a+b) <= max) answer = "NO";
+                // if((a+c) <= max) answer = "NO";
+                // if((b+c) <= max) answer = "NO";
+
+                if((sum-max) <= max) answer = "NO";
+
+                return answer;
+            }
+
+            console.log(solution(13, 33, 17));
+        </script>
+    </body>
+</html>:
