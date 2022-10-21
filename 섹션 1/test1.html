@@ -7,10 +7,10 @@
         <script>
             function solution(a, b, c){
                 let answer;
-                
+
                 if(a<b) answer=a;
                 else answer=b;
-                if(c<answer) answer=c; 
+                if(c<answer) answer=c; // answer에 a, b 중 더 작은 값을 저장해두고 c와 answer만 비교해주면 모두 비교가 가능함.
 
                 return answer;
             }
