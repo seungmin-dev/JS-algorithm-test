@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){         
+                let answer=0;
+                for(let i of s) {
+                    if(i === i.toUpperCase()) answer++; //보통은 이렇게 푼다.
+
+                    // let num = x.charCodeAt(); //해당 문자의 아스키코드 리턴
+                    // if(num >= 65 && num <= 90) answer++; //대문자
+                }
+
+                return answer;
+            }
+
+            let str="KoreaTimeGood";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
