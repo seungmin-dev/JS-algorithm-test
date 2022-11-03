@@ -8,7 +8,7 @@
             // 팰린드롬 : 앞에서 읽어도 뒤에서 읽어도 같은 문자열
             function solution(s){
                 let answer="YES";
-                s = s.toLowerCase().replace(/[^a-z]/g, '');
+                s = s.toLowerCase().replace(/[^a-z]/g, ''); // 정규식
                 if(s.split('').reverse().join('') !== s) return "NO";
                 return answer;
             }
