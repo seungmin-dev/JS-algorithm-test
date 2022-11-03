@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s, t){
+                // 임의의 수 p=1000을 잡음
+                // 맨 첫 문자부터 지나면서 p++
+                // t를 만나면 0으로 초기화
+                // p 값들 배열에 넣기 [1001, 0, 1, 2, 3, 0, 1, 2, 3, 4, 0]
+                // 마지막 문자부터 다시 p=1000, p++ 시작
+                // 처음 p 값, 두번째 p 값 비교해서 더 작은 값 선택(최단거리)
+
+                let answer=[];
+                let p = 1000;
+                for(let i of s) {
+                    if(i === t) {
+                        p = 0;
+                    } else {
+                        p++;
+                    }
+                    answer.push(p);
+                }
+                p = 1000;
+                for(let i=s.length-1; i>=0; i--) {
+                    if(s[i] === t) p = 0;
+                    else {
+                        p++;
+                        answer[i] = Math.min(answer[i], p);
+                    }
+                }
+                return answer;
+            }
+            
+            let str="teachermode";
+            console.log(solution(str, 'e'));
+        </script>
+    </body>
+</html>
